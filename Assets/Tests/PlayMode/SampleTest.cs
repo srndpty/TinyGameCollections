@@ -1,0 +1,29 @@
+using System.Collections;
+using System.Collections.Generic;
+using NUnit.Framework;
+using UnityEngine;
+using UnityEngine.TestTools;
+
+namespace TinyGameColelction.Tests
+{
+	public class SampleTest
+	{
+		// A Test behaves as an ordinary method
+		[Test]
+		public void SampleTestSimplePasses()
+		{
+			Assert.AreEqual(2 * 2, 2 + 2);
+		}
+
+		// A UnityTest behaves like a coroutine in Play Mode. In Edit Mode you can use
+		// `yield return null;` to skip a frame.
+		[UnityTest]
+		public IEnumerator SampleTestWithEnumeratorPasses()
+		{
+			// Use the Assert class to test conditions.
+			// Use yield to skip a frame.
+			yield return null;
+			Assert.AreEqual(1 - 1, 6 - 6);
+		}
+	}
+}

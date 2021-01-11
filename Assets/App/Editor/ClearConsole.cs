@@ -4,7 +4,7 @@ using System.Reflection;
 using UnityEditor;
 using UnityEngine;
 
-namespace UBL
+namespace TinyGameCollections
 {
 	public static class ClearConsole
 	{

@@ -1,0 +1,17 @@
+using System;
+using UnityEngine;
+using System.Collections.Generic;
+
+#ROOTNAMESPACEBEGIN#
+	/// <summary>
+	/// #CLASS_NAME#のModelクラス 
+	/// </summary>
+	[Serializable]
+	public class #CLASS_NAME#Model : IModel
+	{
+	    public void Initialize()
+	    {
+	        //初期化処理
+	    }
+	}
+#ROOTNAMESPACEEND#

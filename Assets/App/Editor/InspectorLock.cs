@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
-namespace UBL
+namespace TinyGameCollections
 {
 	public class InspectorLock
 	{

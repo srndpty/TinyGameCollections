@@ -1,0 +1,49 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UniRx;
+
+#ROOTNAMESPACEBEGIN#
+	/// <summary>
+	/// #CLASS_NAME#のPresenterクラス
+	/// </summary>
+	[RequireComponent(typeof(#CLASS_NAME#View))]
+	[DisallowMultipleComponent]
+	public class #CLASS_NAME#Presenter : GenericPresenterBase<#CLASS_NAME#View, #CLASS_NAME#Model>
+	{
+		/// <summary>
+		/// 初期化処理(ベースクラスの初期化前）
+		/// </summary>
+		protected override void OnBeforeInitialize()
+		{
+		}
+		
+		/// <summary>
+		/// 初期化処理(ベースクラスの初期化終了後）
+		/// </summary>
+		protected override void OnAfterInitialize()
+		{
+		}
+
+		/// <summary>
+		/// Modelの値を監視する
+		/// </summary>
+		protected override void Bind()
+		{
+		}
+
+		/// <summary>
+		/// 外部イベントを監視する
+		/// </summary>
+		protected override void ExternalEventBind()
+		{
+		}
+
+		/// <summary>
+		/// Viewのイベントの設定を行う
+		/// </summary>
+		protected override void SetEvent()
+		{
+		}
+	}
+#ROOTNAMESPACEEND#

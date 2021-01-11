@@ -1,0 +1,16 @@
+{
+    "name": "Pong",
+    "rootNamespace": "TinyGameCollections.Pong",
+    "references": [
+        "GUID:61ebb16d69e00f74a99c45c385d50dc6"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

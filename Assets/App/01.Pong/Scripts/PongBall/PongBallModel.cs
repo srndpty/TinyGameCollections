@@ -1,17 +1,14 @@
-using System;
+﻿using System;
 using UnityEngine;
 using System.Collections.Generic;
-using UniRx;
-using Cysharp.Threading.Tasks;
-using Zenject;
 
-namespace #NAMESPACE#
+namespace TinyGameCollections
 {
 	/// <summary>
-	/// #CLASS_NAME#のModelクラス 
+	/// PongBallのModelクラス 
 	/// </summary>
 	[Serializable]
-	public class #CLASS_NAME#Model : IModel
+	public class PongBallModel : IModel
 	{
 	    public void Initialize()
 	    {

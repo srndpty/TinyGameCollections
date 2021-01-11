@@ -1,0 +1,55 @@
+{
+    "name": "PongActions",
+    "maps": [
+        {
+            "name": "Pong",
+            "id": "17fa1dcf-ef73-4189-aa79-9c02731f6414",
+            "actions": [
+                {
+                    "name": "MoveY",
+                    "type": "Value",
+                    "id": "710b711f-e12f-42c3-b6db-0d73f7aaba7b",
+                    "expectedControlType": "Double",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "WS",
+                    "id": "a587811b-d296-4e31-9ef8-b9b707989e34",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MoveY",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "29683c8b-4e70-4e0e-9109-bc8dbf08a5ec",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MoveY",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "10925388-c36f-44dc-8c7a-cefad2e27607",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MoveY",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

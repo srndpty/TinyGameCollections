@@ -1,22 +1,31 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UniRx;
+using Cysharp.Threading.Tasks;
+using UniRx.Triggers;
 
 namespace TinyGameCollections
 {
 	/// <summary>
-	/// PlayerのPresenterクラス
+	/// PongPlayerのPresenterクラス
 	/// </summary>
-	[RequireComponent(typeof(PlayerView))]
+	[RequireComponent(typeof(PongPlayerView))]
 	[DisallowMultipleComponent]
-	public class PlayerPresenter : GenericPresenterBase<PlayerView, PlayerModel>
+	public class PongPlayerPresenter : GenericPresenterBase<PongPlayerView, PongPlayerModel>
 	{
+		[SerializeField]
+		private Collider2D _collider;
+
 		/// <summary>
 		/// 初期化処理(ベースクラスの初期化前）
 		/// </summary>
 		protected override void OnBeforeInitialize()
 		{
+			this.UpdateAsObservable()
+				.Subscribe(_ => _model.Move())
+				.AddTo(this);
 		}
 		
 		/// <summary>
@@ -31,6 +40,9 @@ namespace TinyGameCollections
 		/// </summary>
 		protected override void Bind()
 		{
+			_model.PositionY
+				.Subscribe(y => _view.SetY(y))
+				.AddTo(this);
 		}
 
 		/// <summary>

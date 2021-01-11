@@ -1,14 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UniRx;
+using Cysharp.Threading.Tasks;
+using Zenject;
 
 namespace TinyGameCollections
 {
 	/// <summary>
-	/// PlayerのViewクラス
+	/// PongFieldのViewクラス
 	/// </summary>
 	[DisallowMultipleComponent]
-	public class PlayerView : MonoBehaviour ,IView
+	public class PongFieldView : MonoBehaviour, IView
 	{
 		/// <summary>
 		/// 初期化処理

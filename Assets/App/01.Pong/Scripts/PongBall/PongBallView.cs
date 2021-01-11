@@ -1,17 +1,14 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UniRx;
-using Cysharp.Threading.Tasks;
-using Zenject;
 
-namespace #NAMESPACE#
+namespace TinyGameCollections
 {
 	/// <summary>
-	/// #CLASS_NAME#のViewクラス
+	/// PongBallのViewクラス
 	/// </summary>
 	[DisallowMultipleComponent]
-	public class #CLASS_NAME#View : MonoBehaviour, IView
+	public class PongBallView : MonoBehaviour ,IView
 	{
 		/// <summary>
 		/// 初期化処理

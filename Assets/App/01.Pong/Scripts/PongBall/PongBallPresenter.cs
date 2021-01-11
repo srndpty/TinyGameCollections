@@ -1,18 +1,16 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UniRx;
-using Cysharp.Threading.Tasks;
-using Zenject;
 
-namespace #NAMESPACE#
+namespace TinyGameCollections
 {
 	/// <summary>
-	/// #CLASS_NAME#のPresenterクラス
+	/// PongBallのPresenterクラス
 	/// </summary>
-	[RequireComponent(typeof(#CLASS_NAME#View))]
+	[RequireComponent(typeof(PongBallView))]
 	[DisallowMultipleComponent]
-	public class #CLASS_NAME#Presenter : GenericPresenterBase<#CLASS_NAME#View, #CLASS_NAME#Model>
+	public class PongBallPresenter : GenericPresenterBase<PongBallView, PongBallModel>
 	{
 		/// <summary>
 		/// 初期化処理(ベースクラスの初期化前）

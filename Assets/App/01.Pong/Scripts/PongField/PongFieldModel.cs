@@ -1,14 +1,17 @@
 ﻿using System;
 using UnityEngine;
 using System.Collections.Generic;
+using UniRx;
+using Cysharp.Threading.Tasks;
+using Zenject;
 
 namespace TinyGameCollections
 {
 	/// <summary>
-	/// PlayerのModelクラス 
+	/// PongFieldのModelクラス 
 	/// </summary>
 	[Serializable]
-	public class PlayerModel : IModel
+	public class PongFieldModel : IModel
 	{
 	    public void Initialize()
 	    {

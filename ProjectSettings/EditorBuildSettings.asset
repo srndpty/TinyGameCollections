@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/App/Scenes/1.Pong.unity
+    guid: c070d099b6f68fb44b5c596c26ffbb78
+  - enabled: 1
     path: Assets/Plugins/Zenject/OptionalExtras/IntegrationTests/SceneTests/TestSceneContextEvents/TestSceneContextEvents.unity
     guid: 6a6e139b8a4d4d544a3318c53b9ae3d6
   m_configObjects: {}

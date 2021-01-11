@@ -1,24 +1,39 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UniRx;
 using Cysharp.Threading.Tasks;
 using Zenject;
 
-namespace #NAMESPACE#
+namespace TinyGameCollections
 {
 	/// <summary>
-	/// #CLASS_NAME#のPresenterクラス
+	/// PongFieldのPresenterクラス
 	/// </summary>
-	[RequireComponent(typeof(#CLASS_NAME#View))]
+	[RequireComponent(typeof(PongFieldView))]
 	[DisallowMultipleComponent]
-	public class #CLASS_NAME#Presenter : GenericPresenterBase<#CLASS_NAME#View, #CLASS_NAME#Model>
+	public class PongFieldPresenter : GenericPresenterBase<PongFieldView, PongFieldModel>
 	{
+		[SerializeField]
+		private List<PongPlayerPresenter> _players;
+
+		[SerializeField]
+		private List<PongBallPresenter> _balls;
+
 		/// <summary>
 		/// 初期化処理(ベースクラスの初期化前）
 		/// </summary>
 		protected override void OnBeforeInitialize()
 		{
+			foreach (var player in _players)
+			{
+				player.Initialize();
+			}
+
+			foreach (var ball in _balls)
+			{
+				ball.Initialize();
+			}
 		}
 		
 		/// <summary>

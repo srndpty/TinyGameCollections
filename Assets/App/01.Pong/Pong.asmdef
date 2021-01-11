@@ -1,6 +1,6 @@
 {
     "name": "Pong",
-    "rootNamespace": "TinyGameCollections.Pong",
+    "rootNamespace": "TinyGameCollections",
     "references": [
         "GUID:61ebb16d69e00f74a99c45c385d50dc6",
         "GUID:560b04d1a97f54a4e82edc0cbbb69285",

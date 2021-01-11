@@ -54,6 +54,7 @@ namespace TinyGameCollections
 					string saveDirectoryPath = $"{directoryPath}/{fileName}";
 					//スクリプトファイルを生成
 					File.WriteAllText(saveDirectoryPath, classTemplate, Encoding.UTF8);
+					
 				}
 			}
 

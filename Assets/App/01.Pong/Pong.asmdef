@@ -1,12 +1,12 @@
 {
-    "name": "TinyGameCollections",
-    "rootNamespace": "TinyGameCollections",
+    "name": "Pong",
+    "rootNamespace": "TinyGameCollections.Pong",
     "references": [
-        "GUID:0d8beb7f090555447a6cf5ce9e54dbb4",
+        "GUID:61ebb16d69e00f74a99c45c385d50dc6",
         "GUID:560b04d1a97f54a4e82edc0cbbb69285",
         "GUID:f51ebe6a0ceec4240a699833d6309b23",
-        "GUID:75469ad4d38634e559750d17036d5f7c",
-        ""
+        "GUID:0d8beb7f090555447a6cf5ce9e54dbb4",
+        "GUID:75469ad4d38634e559750d17036d5f7c"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

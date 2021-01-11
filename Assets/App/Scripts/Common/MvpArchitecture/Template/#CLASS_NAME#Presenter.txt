@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UniRx;
 
-#ROOTNAMESPACEBEGIN#
+namespace #NAMESPACE#
+{
 	/// <summary>
 	/// #CLASS_NAME#のPresenterクラス
 	/// </summary>
@@ -46,4 +47,4 @@ using UniRx;
 		{
 		}
 	}
-#ROOTNAMESPACEEND#
+}

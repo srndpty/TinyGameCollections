@@ -17,28 +17,25 @@ namespace TinyGameCollections
 		[MenuItem("Assets/Create/Create MVP Scripts")]
 		private static void CreateMvpScript()
 		{
-			Debug.Log("Create Mvp Script");
-			//選択中のフォルダ全てに対して処理を行う
-			foreach (var o in Selection.objects)
+			Debug.Log("Creating Mvp Script");
+			// 選択中のフォルダ全てに対して処理を行う
+			foreach (var obj in Selection.objects)
 			{
 				//ディレクトリパス
-				var directoryPath = AssetDatabase.GetAssetPath(o);
+				var directoryPath = AssetDatabase.GetAssetPath(obj);
 				//フォルダかどうかを判定
 				var isDirectory = File.GetAttributes(directoryPath).HasFlag(FileAttributes.Directory);
 
 				if (isDirectory == false)
 				{
-					Debug.LogWarningFormat("選択中のオブジェクトはフォルダではありません, Path{0}", directoryPath);
+					Debug.LogWarning($"`{directoryPath}`はフォルダではありません");
 					continue;
 				}
 
-				//半半角英字以外を抽出する正規表現
+				// 半角英字以外を除去する
 				var regex = new Regex(@"[^a-zA-Z]");
-				//ディレクトリ名取得
 				var directoryName = regex.Replace(directoryPath.Split('/').LastOrDefault(), "");
-				//クラス名
 				string className = directoryName;
-				//設定ファイルを取得
 				var settings = MvpSettings.Instance;
 
 				if (settings == null)
@@ -53,15 +50,14 @@ namespace TinyGameCollections
 					string fileName = template.name.Replace("#CLASS_NAME#", className) + ".cs";
 					string classTemplate = template.text;
 					classTemplate = classTemplate.Replace("#CLASS_NAME#", className);
-					string saveDirectoryPath = directoryPath + "/" + fileName;
+					classTemplate = classTemplate.Replace("#NAMESPACE#", typeof(MvpScriptCreator).Namespace);
+					string saveDirectoryPath = $"{directoryPath}/{fileName}";
 					//スクリプトファイルを生成
 					File.WriteAllText(saveDirectoryPath, classTemplate, Encoding.UTF8);
 				}
 			}
 
-			//refresh
 			AssetDatabase.Refresh();
-			//save
 			AssetDatabase.SaveAssets();
 		}
 	}

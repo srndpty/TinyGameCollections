@@ -2,7 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-#ROOTNAMESPACEBEGIN#
+namespace #NAMESPACE#
+{
 	/// <summary>
 	/// #CLASS_NAME#のViewクラス
 	/// </summary>
@@ -16,4 +17,4 @@ using UnityEngine;
 		{
 		}
 	}
-#ROOTNAMESPACEEND#
+}

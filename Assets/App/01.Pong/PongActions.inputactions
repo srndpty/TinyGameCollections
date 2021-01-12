@@ -6,9 +6,17 @@
             "id": "17fa1dcf-ef73-4189-aa79-9c02731f6414",
             "actions": [
                 {
-                    "name": "MoveY",
+                    "name": "MoveY1",
                     "type": "Value",
                     "id": "710b711f-e12f-42c3-b6db-0d73f7aaba7b",
+                    "expectedControlType": "Double",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "MoveY2",
+                    "type": "Value",
+                    "id": "e51c228b-45fb-4341-a8c7-0c9abe5bc3f7",
                     "expectedControlType": "Double",
                     "processors": "",
                     "interactions": ""
@@ -22,7 +30,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "MoveY",
+                    "action": "MoveY1",
                     "isComposite": true,
                     "isPartOfComposite": false
                 },
@@ -33,7 +41,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "MoveY",
+                    "action": "MoveY1",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -44,7 +52,40 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "MoveY",
+                    "action": "MoveY1",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "UpperLower",
+                    "id": "0b9bcaa1-6c8b-4ad7-80e3-c62f9f721b0d",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MoveY2",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "482b81d1-96a7-4e49-928f-54fde34db6fb",
+                    "path": "<Keyboard>/downArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MoveY2",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "ff04e3ab-cbf3-4191-b50a-caa1f38eb9f3",
+                    "path": "<Keyboard>/upArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MoveY2",
                     "isComposite": false,
                     "isPartOfComposite": true
                 }

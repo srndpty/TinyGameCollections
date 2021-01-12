@@ -25,9 +25,12 @@ namespace TinyGameCollections
 		[SerializeField]
 		private float _limitPosition = 3.5f;
 
+		[SerializeField]
+		private string _actionName;
+
 		public ReactiveProperty<float> PositionY { get; set; } = new ReactiveProperty<float>();
 
-		private float _moveAmount => _playerInput.actions["Pong/MoveY"].ReadValue<float>();
+		private float _moveAmount => _playerInput.actions[_actionName].ReadValue<float>();
 
 		public void Initialize()
 		{
